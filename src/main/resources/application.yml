@@ -1,0 +1,16 @@
+spring:
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${DATASOURCE_DB_NAME:finalproject}
+    username: ${DATASOURCE_USER:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+
+server:
+  port: 8080
